@@ -7,6 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { dataProps } from './_types/dataTypes';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
   const regExp = {

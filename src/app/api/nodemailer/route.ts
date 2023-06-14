@@ -1,7 +1,7 @@
 // require('dotenv').config();
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
-import { dataProps } from '@/app/inquiry/_types/dataTypes';
+import { dataProps } from '@/app/_types/dataTypes';
 
 export async function POST(req: Request) {
   // SMTP Transport 설정

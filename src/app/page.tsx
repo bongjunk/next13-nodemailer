@@ -56,7 +56,7 @@ const Home = () => {
   //   if (data) {
   //     const { name, phone_number, email, contents } = data;
   //     try {
-  //       location.href = `MAILTO:sosopa94@gmail.com?subject=모빌리버스 투자정보 문의하기 메일&body=이름 : ${name}%0A%0A연락처 : ${phone_number}%0A%0A이메일: ${email}%0A%0A내용 : ${contents}`;
+  //       location.href = `MAILTO:sosopa94@gmail.com?subject=김봉준에게 문의하기&body=이름 : ${name}%0A%0A연락처 : ${phone_number}%0A%0A이메일: ${email}%0A%0A내용 : ${contents}`;
   //       reset();
   //     } catch (e) {
   //       console.log('e', e);
@@ -77,6 +77,7 @@ const Home = () => {
             console.log('e', e);
           });
         toast.success('문의사항 전송에 성공하였습니다.');
+        reset();
       } catch (e) {
         console.log('e', e);
         toast.error('문의사항 전송에 실패하였습니다.');
@@ -96,7 +97,7 @@ const Home = () => {
 
   return (
     <>
-      <article className="w-full h-full bg-[#f8f6ff] flex justify-center desktop:py-[7.75rem] py-[7rem] mobile:py-[3.5rem]">
+      <article className="w-full h-screen bg-[#f8f6ff] flex justify-center">
         <div className="desktop:flex desktop:justify-between desktop:items-center block desktop:w-[75rem] w-full h-full desktop:mx-0 tablet:mx-12 mobile:mx-6">
           <div className="desktop:mb-0 mb-[3.312rem]">
             <p className="desktop:text-[2.813rem] text-4xl mobile:text-3xl text-black font-bold leading-[1.56] tracking-[-1.8px]">
@@ -205,7 +206,11 @@ const Home = () => {
             </form>
           </div>
         </div>
-        <ToastContainer />
+        <ToastContainer
+          position="top-center"
+          autoClose={1500}
+          pauseOnFocusLoss={false}
+        />
       </article>
     </>
   );

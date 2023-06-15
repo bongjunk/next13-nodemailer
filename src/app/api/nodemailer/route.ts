@@ -30,7 +30,7 @@ export async function POST(req: Request) {
   const mailOptions = {
     from: process.env.NODE_MAILER_ID,
     to: process.env.NODE_MAILER_ID,
-    subject: '김봉준 문의사항',
+    subject: '김봉준에게 문의하기',
     html: `
       <div>
         <p>이름 : ${name || ''}</p>

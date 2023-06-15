@@ -14,7 +14,7 @@ module.exports = {
       },
       screens: {
         desktop: '1200px',
-        tablet: { min: '720px', max: '1119px' },
+        tablet: { min: '720px', max: '1199px' },
         mobile: { min: '0px', max: '719px' },
       },
     },
